@@ -1,0 +1,8 @@
+{
+  "name": "wp-2",
+  "dependencies": {
+    "jquery": "1.12",
+    "normalize-css": "normalize.css#~3.0.3",
+    "jquery.columnizer": "~1.6.2"
+  }
+}

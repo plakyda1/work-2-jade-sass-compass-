@@ -1,0 +1,11 @@
+- var brd = ["Главная", "Контакты"]
+.breadcrumbs
+	.container
+		ul.breadcrumbs__list
+			each item in brd
+				if item == 'Контакты'
+					li.breadcrumbs__item_active
+						a(href="#").breadcrumbs__link #{item}
+				else
+					li.breadcrumbs__item
+						a(href="#").breadcrumbs__link #{item}

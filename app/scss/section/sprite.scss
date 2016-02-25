@@ -1,0 +1,16 @@
+.social-block__link{
+	display:block;
+}
+@import "socials/*.png";
+
+$socialClass: fb, vk, tw, fb_w, vk_w, tw_w;
+
+ @each $item in $socialClass {
+	.social-block__link_#{$item} {
+		@include socials-sprite($item) ;
+		$height : socials-sprite-height($item);
+		$width : socials-sprite-width($item);
+		width: $width;
+		height: $height;
+	}
+}

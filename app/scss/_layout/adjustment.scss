@@ -1,0 +1,45 @@
+// Variables------------
+$orange : #f60;
+$gray : #f4f4f4;
+//----------------------
+*{
+	box-sizing:border-box;
+}
+html{
+	font-family: "OpenSans-Regular";
+	font-size:14px;
+}
+body{
+	background:$gray;
+}
+ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.seo-text{
+	font-size:0px;
+}
+h2{
+	padding:0;
+	margin:0;
+	font-size:20px;
+}
+
+/* прибьём футер к низу*/
+.wrapper{
+	position:relative;
+	min-height:100%;
+	height:auto!important;
+	overflow:hidden;
+	&:after {
+		content: "";
+		height: 220px;
+		display: block;
+	}
+}
+.footer{
+	height: 220px;
+	margin-top: -220px;	
+}
+/* прибьём футер к низу - конец*/

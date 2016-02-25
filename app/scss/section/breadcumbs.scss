@@ -1,0 +1,22 @@
+.breadcrumbs{
+	margin-bottom:27px;
+}
+.breadcrumbs__item{
+	display:inline-block;
+	&_active{
+		display:inline-block;
+	}
+}
+.breadcrumbs__link{
+	color:#333;
+	text-decoration:none;
+}
+.breadcrumbs__item_active>.breadcrumbs__link{
+	color:$orange;
+	text-decoration:underline;
+}
+.breadcrumbs__item:after {
+    content: '>';
+    padding-left: 5px;
+    font-size: 12px;
+}

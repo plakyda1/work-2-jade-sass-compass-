@@ -1,0 +1,24 @@
+.content-title{
+	margin-bottom:35px;
+}
+.aside{
+	float:left;
+	width:333px;
+}
+.mob-block__list{
+	font-size:14px;
+	background:#fff;
+	@include border-radius(3px);
+	overflow:hidden;
+	border: 1px solid #dee1e4;
+}
+.mob-block__link{
+	display: block;
+    padding: 15px 26px;
+    color: #7f7f7f;
+    text-decoration:none;
+    &_active{
+    	background: #d9e5ea;
+    	color:#5d656c;
+    }
+}

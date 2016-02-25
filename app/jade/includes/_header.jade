@@ -1,0 +1,43 @@
+- var socialClass = ["fb", "vk", "tw"]
+- var socialClass_w = ["fb_w", "vk_w", "tw_w"]
+- var socialButtonText = ["Фейсбук", "Вконтакте", "Твиттер", "Фейсбук", "Вконтакте", "Твиттер"]
+- var userMenu = ["Карта проезда", "История заказов", "Корзина"]
+- var menuTypes = ["Планшеты", "Мобильный телефоны", "MP3 плееры", "Персональный компьютеры", "Ноутбуки", "Аксессуары", "Бытовая техника"]
+			header.header
+				.header__first-line
+					.header__contacts.container
+						.social-block
+							ul.social-block__list
+								- for (var i = 0; i < socialClass.length; i++)
+									li.social-block__item
+										a.social-block__link(href="#" class="social-block__link_#{socialClass[i]}")
+											span.seo-text #{socialButtonText[i]}				
+						.contacts
+							span.contacts__adress.contacts-elem ул. Маяковская 6, офис 17
+							span.contacts__phone.contacts-elem +7 (921) 123-12-13
+				.header__logo-search
+					.container
+						.logo
+							a.logo__link
+								img.logo__img(src="../img/logo/logo.png")
+								h1.seo-text Интернет Магазин
+						form.search__inputs(action="#" method="get" placeholder="Что будем искать")
+							input.s-input(type='text')
+							button.s-button Найти
+						.user-menu
+							ul.user-menu__list
+								each item in userMenu
+									li.user-menu__item
+										a.user-menu__link #{item}
+				.header__menu
+					.container
+						.menu-types
+							ul.menu-types__list
+								each item in menuTypes
+									li.menu-types__item
+										if item == 'Мобильный телефоны'
+											a(href="#").menu-types__link.menu-types__link_active #{item}
+										else
+											a(href="#").menu-types__link #{item}
+
+

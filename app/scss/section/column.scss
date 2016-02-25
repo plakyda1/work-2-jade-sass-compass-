@@ -1,0 +1,15 @@
+.column{
+	font-size:14px;
+	&__text{
+		text-align:justify;
+		text-indent:37px;
+	}
+}
+.first{
+	width:48% !important;
+	float:left !important;
+}
+.last{
+	width:48% !important;
+	float:right !important;
+}

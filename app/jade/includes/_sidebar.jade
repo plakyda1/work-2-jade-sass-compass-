@@ -1,0 +1,17 @@
+- var mobBlock = ["Флагманы", "Бюджетная линейка"]
+- var filtMagaz = ["Во всех магазинах", "В ближайшем ко мне магазине" ]
+- var filtBrand = ["Lenovo", "Apple", "Samsung", "Asus", "Motorola"]
+- var filtColor = ["fff", "ccc", "000", "0a3153", "ff1800", "fff343", "fb914a", "92c37c", "40a6ff", "9870ad", "dc78ad", "7f401d"]
+- var filtOs = ["Android", "iOS", "Windows Mobile", "Symbian", "Custom"]
+aside.aside
+	.mob-block
+		ul.mob-block__list
+			each item in mobBlock
+				li.mob-block__item
+					if item == 'Бюджетная линейка'
+						a(href="#").mob-block__link.mob-block__link_active #{item}
+					else
+						a(href="#").mob-block__link #{item}
+	form.filter
+
+

@@ -1,0 +1,23 @@
+footer.footer
+	.footer__top
+		.container
+			.footer-left
+				.logo
+					a.logo__link
+						img.logo__img(src="../img/logo/logo-white.png")
+						h1.seo-text Интернет Магазин
+			.footer-right
+				.social-block_w
+					ul.social-block__list_w
+						- for (var i = 0; i < socialClass_w.length; i++)
+							li.social-block__item_w
+								a.social-block__link(href="#" class="social-block__link_#{socialClass_w[i]}")
+									span.seo-text #{socialButtonText[i]}
+				.menu-footer
+					ul.menu-footer__list
+						each item in menuTypes
+							li.menu-footer__item
+								a(href="#").menu-footer__link #{item}
+	.footer__bottom
+		.container
+			.copyright All rights reserved. 2015. no copy alowed
