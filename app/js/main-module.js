@@ -46,7 +46,9 @@ var myModule = (function () {
 		e.preventDefault();
 		_change($(this))
 	}
+	
 	previosClass = '';
+
 	function _change($this){
 		item = $this.closest('.filter-view__item'),
 		view = item.attr("data-view"),
