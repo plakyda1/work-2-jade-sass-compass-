@@ -1,16 +1,16 @@
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
-    compass = require('gulp-compass'),
-  	browserSync = require('browser-sync');
+    compass = require('gulp-compass');
+  	//browserSync = require('browser-sync');
 
-  gulp.task('server', function () {
-  	browserSync({
-  		port: 9000,
-  		server: {
-  			baseDir: 'app/dist'
-  		}
-  	});
-  });
+  // gulp.task('server', function () {
+  // 	browserSync({
+  // 		port: 9000,
+  // 		server: {
+  // 			baseDir: 'app'
+  // 		}
+  // 	});
+  // });
 
 gulp.task('jade', function() {
   var YOUR_LOCALS = {};
@@ -37,12 +37,12 @@ gulp.task('watch', function(){
     gulp.watch('app/scss/**/*.scss',['compass']);
 	});
 
-gulp.task('watchin', function (){
-	gulp.watch([
-    'app/*',
-		'app/dist/*.html',
-		'app/dist/css/**/*.css'
-		]).on('change', browserSync.reload);
-});
+// gulp.task('watchin', function (){
+// 	gulp.watch([
+//     'app/*',
+// 		'app/dist/*.html',
+// 		'app/dist/css/**/*.css'
+// 		]).on('change', browserSync.reload);
+// });
 
-gulp.task('default', ['server', 'watchin', 'watch' ]);
+gulp.task('default', ['watch']);

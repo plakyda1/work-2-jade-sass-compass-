@@ -137,3 +137,8 @@ $(".filt-magaz_reset").on('click', function(event) {
 	inputs = item.find('input');
 	inputs.removeAttr('checked');
 });
+// ---------------------------------prevent-----------------
+$('.products__bay-btn').on('click', function(event) {
+	event.preventDefault();
+	
+});
