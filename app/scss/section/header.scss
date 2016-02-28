@@ -21,18 +21,40 @@
 	}
 	&__item{
 	display:inline-block;
-	margin-right:10px;
+	margin-right: 16px;
 	font-size:0;
 	}
+	&__item:last-child{
+		margin-right: 0;
+	}
 }
+$header-map: sprite-map('header/*.png', $spacing:10px);
 .contacts{
 	float:right;
 	@include vertical-align();
 	&__adress{
 		margin-right:110px;
+		position:relative;
+	}
+	&__adress:before{
+		content:"";
+		position:absolute;
+		@include get-sprite($header-map, adress-map);
+		left:-20px;
 	}
 	&-elem{
 		display:inline-block;
+	}
+	&__phone{
+		font-size:18px;
+		position: relative;
+	}
+	&__phone:before{
+		content:"";
+		position:absolute;
+		@include get-sprite($header-map, phone-img);
+		left:-20px;
+		top: 4px;
 	}
 }
 .logo{
@@ -80,6 +102,17 @@
 		display:inline-block;
 		margin-right:30px;
 	}
+	&__link{
+		text-decoration: underline;
+	}
+	&__link:hover{
+		color:$orange;
+		cursor:pointer;
+	}
+}
+.user-menu__list{
+	font-size:16px;
+	font-weight:bold;
 }
 .header__menu{
 	background: white;

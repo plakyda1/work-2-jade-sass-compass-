@@ -1,0 +1,77 @@
+main.main
+	.main__sort
+		.filter-catalog
+			form(action="#").filter-catalog__form
+				label.form-label Сортировать по
+					select.select
+						option по цене
+						option размеру экрана
+						option производителю
+		.filter-view
+			span.filter-view__text Вид каталога
+			ul.filter-view__list
+				- var items = ['rows', 'grids', 'inline']
+				each item in items
+					li(class="filter-view__item filter-view_" + item data-view= item)
+						a(hred="#").filter-view__link
+							.filter-view__icon
+	.main__catalog
+		ul.products__list#products__list
+			- for (var i = 0; i < 9; i++)
+				li.products__item
+					.products__item-inner
+						.products__left
+							.products__slideshow
+								.products__slideshow-block
+									a(href="#").products__slideshow-block-display
+										img(src="../img/phone/phone1.png").products__slideshow-img
+									ul.products__slideshow-thumbs
+										-for(var j=1; j < 4; j++)
+											li.products__slideshow-item
+												a.products__slideshow-link
+													img(src="../img/phone/phone#{j}.png").products__slideshow-img-min
+								.products__article
+									.products__article-word Артикул
+									.products__article-num 6616511
+							.products__description
+								.products__description-title Samsung GT-I9301I GALAXY S 3
+								.products__description-cont Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+								.products__description-table
+									ul.desc-table__list
+										li.desc-table__item
+											.desc-table-key Тип SIM-карты
+											.desc-table-value Micro-SIM
+										li.desc-table__item
+											.desc-table-key Количество SIM-карт
+											.desc-table-value 1
+										li.desc-table__item
+											.desc-table-key Цвет
+											.desc-table-value Белый
+										li.desc-table__item
+											.desc-table-key ОС
+											.desc-table-value Android
+										li.desc-table__item
+											.desc-table-key Связь 3G        
+											.desc-table-value Есть
+										li.desc-table__item
+											.desc-table-key 4G (LTE)   
+											.desc-table-value Нет
+										li.desc-table__item
+											.desc-table-key GPS-модуль
+											.desc-table-value Есть
+							.products__rate
+								ul.products__rate-list
+									li.products__rate-item.products__rate-item_field
+									li.products__rate-item.products__rate-item_field
+									li.products__rate-item.products__rate-item_field
+									li.products__rate-item.products__rate-item_field
+									li.products__rate-item 
+								.products__rate-number 4
+						.products__right
+							.products__info
+								.products__price 11 290 Р 
+							.products__bay
+								a(href="#").products__bay-btn В Корзину
+								.products__bay-now В Наличии
+
+

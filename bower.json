@@ -3,6 +3,8 @@
   "dependencies": {
     "jquery": "1.12",
     "normalize-css": "normalize.css#~3.0.3",
-    "jquery.columnizer": "~1.6.2"
+    "jquery.columnizer": "~1.6.2",
+    "jquery-ui": "jqueryui#~1.11.4",
+    "select2": "~4.0.1"
   }
 }

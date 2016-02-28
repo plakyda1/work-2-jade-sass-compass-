@@ -14,3 +14,15 @@ $socialClass: fb, vk, tw, fb_w, vk_w, tw_w;
 		height: $height;
 	}
 }
+
+@mixin get-sprite($views-map,$item) {
+ $sprite-image: sprite-file($views-map,$item);
+ $sprite-url: sprite-url($views-map);
+ $sprite-position: sprite-position($views-map,$item);
+ $sprite-width: image-width($sprite-image);
+ $sprite-height: image-height($sprite-image);
+
+ background: $sprite-url $sprite-position no-repeat;
+ width: $sprite-width;
+ height: $sprite-height;
+}

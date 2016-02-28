@@ -5,6 +5,9 @@
 	float:left;
 	width:333px;
 }
+.mob-block{
+	margin-bottom:38px;
+}
 .mob-block__list{
 	font-size:14px;
 	background:#fff;
@@ -21,4 +24,239 @@
     	background: #d9e5ea;
     	color:#5d656c;
     }
+    &:hover{
+    	background: #d9e5ea;
+    }
+}
+.filter__list{
+	background:#fff;
+	border: 1px solid #dee1e4;
+	@include border-radius(3px);
+}
+.filter__item{
+	padding: 10px 15px 20px 25px;
+    border-bottom: 1px solid #dee1e4;
+}
+.filt-magaz__item{
+	margin-bottom:17px;
+}
+// Sprite Curet
+$curet-map: sprite-map('curet/*.png', $spacing:20px);
+.filter__link{
+	cursor:pointer;
+	position: relative;
+    display: block;
+    font-family: 'OpenSans-Semibold';
+    color: #333;
+    font-size: 16px;
+}
+.curet-img{
+	background:url(../../img/curet.png);
+	width:18px;
+	height:11px;
+}
+.curet-img_open{
+	background:url(../../img/curet_d.png);
+}
+.accordion-item{
+	margin-top: 15px;
+}
+.input-radio,
+.input-checkbox{
+	display:none;
+}
+.checkbox-label, 
+.radio-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+// Спрайт для Sidebar
+$sidebar-map: sprite-map('sidebar/*.png', $spacing:70px);
+// --------------------------
+.radio-label:before{
+	content:"";
+	@include get-sprite($sidebar-map, radio);
+	display: inline-block;
+    position: absolute;
+    left: 0;
+	width:19px;
+	height:19px;
+}
+.radio-label:hover:before{
+	content:"";
+	@include get-sprite($sidebar-map, radio-hover);
+	display: inline-block;
+    position: absolute;
+    left: 0;
+	width:19px;
+	height:19px;
+}
+input:checked + .radio-label:before{
+	content:"";
+	@include get-sprite($sidebar-map, radio-checked);
+	display: inline-block;
+    position: absolute;
+    left: 0;
+	width:19px;
+	height:19px;
+}
+.checkbox-label:before{
+	content:"";
+	@include get-sprite($sidebar-map, checkbox);
+	display: inline-block;
+    position: absolute;
+    left: 0;
+	width:19px;
+	height:19px;
+}
+input:checked + .checkbox-label:before{
+	content:"";
+	@include get-sprite($sidebar-map, checkbox-checked);
+	display: inline-block;
+    position: absolute;
+    left: 0;
+	width:19px;
+	height:19px;
+}
+.checkbox-label:hover:before{
+	content:"";
+	@include get-sprite($sidebar-map, checkbox-hover);
+	display: inline-block;
+    position: absolute;
+    left: 0;
+	width:19px;
+	height:19px;
+}
+
+/*-------------SLIDER------------------*/
+form {
+	position: relative;
+}
+.filter-slider{
+	@include clearfix();
+}
+.formCost {
+	float: left;
+	margin-bottom: 10px;
+}
+.formCost label {
+	float: left;
+	font-size: 12px;
+	color: #E40000;
+	font-weight: bold;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+.formCost input {
+	float: left;
+	text-align: right;
+	color: #434343;
+	font-size: 12px;
+	font-weight: bold;
+	width: 55px;
+	height: 17px;
+	background: none;
+	border: 1px solid #E5E5E5;
+	margin-right: 10px;
+}
+
+.sliderCont {
+	height: 27px;
+	float: left;
+}		
+
+/* Рђ СЌС‚Рѕ РїСЂР°РІРёР»Р° РґР»СЏ СЃРєСЂРёРїС‚Р°:  */
+#slider {
+	width: 275px;
+}
+
+.ui-slider {
+	position: relative;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 10px;
+    height: 17px;
+	background: url(../../img/slider.png) no-repeat;
+	cursor: pointer;
+	outline: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	overflow: hidden;
+}
+.ui-slider-horizontal {
+	 height: 3px;
+}
+.ui-slider-horizontal .ui-slider-handle { 
+	margin-left: -6px;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min { 
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+.ui-widget-content { 
+	border: 1px solid #D4D4D4;
+	background: #fff;
+}
+.ui-widget-header { 
+	border: 1px solid #D4D4D4;
+	background: $orange;
+}
+.ui-corner-all {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.inputs-filter-price{
+	width:81px;
+	font-size: 14px;
+    box-sizing: border-box;
+    padding: 5px 3px;
+    border: 1px solid #ebedef;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(148,148,148,0.43);
+    outline: none;
+}
+.min-price{
+	margin-right: 75px;
+}
+.filter-slider{
+	margin-bottom: 15px;
+}
+.filt-magaz_reset{
+	color: #5db2fc;
+    text-decoration: underline;
+    cursor:pointer;
+}
+.filter-color{
+	margin-left:-22px;
+	max-width:232px;
+}
+.filter-color__item{
+	display: inline-block;
+
+	border:1px solid $gray;
+	margin-left: 22px;
+	margin-bottom: 22px;
+	width:36px;
+	height:36px;
+}
+.filter-color__item_active{
+	-webkit-box-shadow: 0px 0px 2px 2px rgba(255,102,0,1);
+	-moz-box-shadow: 0px 0px 2px 2px rgba(255,102,0,1);
+	box-shadow: 0px 0px 2px 2px rgba(255,102,0,1);
 }

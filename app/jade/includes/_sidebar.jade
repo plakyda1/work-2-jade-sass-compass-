@@ -12,6 +12,56 @@ aside.aside
 						a(href="#").mob-block__link.mob-block__link_active #{item}
 					else
 						a(href="#").mob-block__link #{item}
-	form.filter
+	form(method="get" action="#").filter
+		ul.filter__list
+			li.filter__item
+				a.filter__link Наличие в магазине
+				.accordion-item
+					ul.filt-magaz
+						li.filt-magaz__item
+							input(type="radio" name="radio")#allmag.input-radio
+							label(for="allmag").radio-label Во всех магазинах
+						li.filt-magaz__item
+							input(type="radio" name="radio")#budgmag.input-radio
+							label(for="budgmag").radio-label В ближайшем ко мне магазине
+			li.filter__item
+				a.filter__link Бренды
+				.accordion-item
+					ul.filt-magaz
+						each item in filtBrand
+							li.filt-magaz__item
+								input(type="checkbox" id="#{item}").input-checkbox
+								label(for="#{item}").checkbox-label #{item}
+					a.filt-magaz_reset Сбросить фильтр
+			li.filter__item
+				a.filter__link Цена
+				.accordion-item
+					.filter-slider
+						span.text-price oт
+						input(type="text" value="0")#minCost.inputs-filter-price.min-price
+						span.text-price до
+						input(type="text" value="26000")#maxCost.inputs-filter-price
+					.sliderCont
+						div#slider
+			li.filter__item
+				a.filter__link Цвет
+					.accordion-item
+						.filter-color
+							each item in filtColor
+									a(style="background:##{item}").filter-color__item
+			li.filter__item
+				a.filter__link Операционные системы
+				.accordion-item
+					ul.filt-magaz
+						each item in filtOs
+							li.filt-magaz__item
+								input(type="checkbox" id="#{item}").input-checkbox
+								label(for="#{item}").checkbox-label #{item}
+					a.filt-magaz_reset Сбросить фильтр
+
+
+
+
+
 
 
