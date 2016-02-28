@@ -32,6 +32,7 @@ h2{
 	min-height:100%;
 	height:auto!important;
 	overflow:hidden;
+	min-width: 1200px;
 	&:after {
 		content: "";
 		height: 220px;
@@ -41,5 +42,6 @@ h2{
 .footer{
 	height: 220px;
 	margin-top: -220px;	
+	min-width: 1200px;
 }
 /* прибьём футер к низу - конец*/

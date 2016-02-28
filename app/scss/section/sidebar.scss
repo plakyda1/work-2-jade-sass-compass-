@@ -34,6 +34,7 @@
 	@include border-radius(3px);
 }
 .filter__item{
+	position:relative;
 	padding: 10px 15px 20px 25px;
     border-bottom: 1px solid #dee1e4;
 }
@@ -49,15 +50,25 @@ $curet-map: sprite-map('curet/*.png', $spacing:20px);
     font-family: 'OpenSans-Semibold';
     color: #333;
     font-size: 16px;
+    &:after{
+    	top:5px;
+    	right:0;
+    	content:"";
+    	position:absolute;
+		@include get-sprite($curet-map, curet_d);
+    }
 }
-.curet-img{
-	background:url(../../img/curet.png);
-	width:18px;
-	height:11px;
+.filter__link_active{
+	position:relative;
+    &:after{
+    	top:5px;
+    	right:0;
+    	content:"";
+    	position:absolute;
+		@include get-sprite($curet-map, curet);
+    }
 }
-.curet-img_open{
-	background:url(../../img/curet_d.png);
-}
+
 .accordion-item{
 	margin-top: 15px;
 }

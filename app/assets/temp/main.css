@@ -34,6 +34,7 @@ h2 {
   min-height: 100%;
   height: auto !important;
   overflow: hidden;
+  min-width: 1200px;
 }
 .wrapper:after {
   content: "";
@@ -44,6 +45,7 @@ h2 {
 .footer {
   height: 220px;
   margin-top: -220px;
+  min-width: 1200px;
 }
 
 /* ╨┐╤А╨╕╨▒╤М╤С╨╝ ╤Д╤Г╤В╨╡╤А ╨║ ╨╜╨╕╨╖╤Г - ╨║╨╛╨╜╨╡╤Ж*/
@@ -174,6 +176,8 @@ h2 {
 }
 .contacts-elem {
   display: inline-block;
+  color: #000;
+  text-decoration: none;
 }
 .contacts__phone {
   font-size: 18px;
@@ -196,6 +200,9 @@ h2 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   position: absolute;
+}
+.logo__img {
+  max-width: 240px;
 }
 
 .header__logo-search {
@@ -387,6 +394,7 @@ h2 {
 }
 
 .filter__item {
+  position: relative;
   padding: 10px 15px 20px 25px;
   border-bottom: 1px solid #dee1e4;
 }
@@ -403,15 +411,27 @@ h2 {
   color: #333;
   font-size: 16px;
 }
-
-.curet-img {
-  background: url(../../img/curet.png);
+.filter__link:after {
+  top: 5px;
+  right: 0;
+  content: "";
+  position: absolute;
+  background: url('../../img/curet-s23a3408a6b.png') 0 -31px no-repeat;
   width: 18px;
   height: 11px;
 }
 
-.curet-img_open {
-  background: url(../../img/curet_d.png);
+.filter__link_active {
+  position: relative;
+}
+.filter__link_active:after {
+  top: 5px;
+  right: 0;
+  content: "";
+  position: absolute;
+  background: url('../../img/curet-s23a3408a6b.png') 0 0 no-repeat;
+  width: 18px;
+  height: 11px;
 }
 
 .accordion-item {
@@ -669,21 +689,23 @@ form {
   font-size: 14px;
   font-weight: 400;
   border-left: 1px solid #d9e5ea;
+  margin-bottom: 20px;
+  overflow: hidden;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  margin-bottom: 20px;
-  overflow: hidden;
 }
-
 .main__sort:before, .main__sort:after {
   content: "";
   display: table;
 }
 .main__sort:after {
   clear: both;
+}
+.main__catalog {
+  margin-bottom: 15px;
 }
 
 .form-label {
@@ -908,6 +930,7 @@ form {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .products__article {
@@ -1208,7 +1231,7 @@ form {
 .products__list_inline .products__description-title {
   display: inline-block;
   margin-bottom: 0;
-  max-width: 280px;
+  max-width: 270px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1270,8 +1293,6 @@ form {
 
 .column {
   font-size: 14px;
-}
-.column__text {
   text-align: justify;
   text-indent: 37px;
 }
@@ -1325,6 +1346,9 @@ form {
   margin-left: 25px;
   font-size: 0;
   text-align: right;
+}
+.social-block__item_w:first-child {
+  margin-left: 0;
 }
 
 .menu-footer {

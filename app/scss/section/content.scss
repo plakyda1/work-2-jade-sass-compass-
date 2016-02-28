@@ -8,13 +8,14 @@
 	    font-size: 14px;
 	    font-weight: 400;
 	    border-left: 1px solid #d9e5ea;
-	    @include border-radius(5px);
 	    margin-bottom: 20px;
 	    overflow:hidden;
+	    @include clearfix();
+	    @include border-radius(5px);
+	}
+	&__catalog{
+		margin-bottom:15px;
 	}	
-}
-.main__sort{
-	@include clearfix();
 }
 .form-label{
 	margin-left:22px;
@@ -159,6 +160,7 @@ $items: rows, grids, inline;
 	max-height:95%;
 	margin:0 auto;
 	@include vertical-align();
+	cursor:pointer;
 }
 .products__article{
 	text-align:center;
@@ -411,7 +413,7 @@ $items: rows, grids, inline;
 	.products__description-title{
 		display:inline-block;
 		margin-bottom:0;
-		max-width:280px;
+		max-width:270px;
 		white-space: nowrap;
     	overflow: hidden;
     	text-overflow: ellipsis;

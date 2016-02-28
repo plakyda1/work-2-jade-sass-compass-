@@ -79,8 +79,8 @@ $(document).ready(function($){
   $(".filter__link").on("click", function(event){
   		 event.preventDefault();
   		 // curet = $('.curet-img');
-		$(this)
-		// curet.toggleClass("curet-img_open")
+		$(this) 	
+		.toggleClass("filter__link_active")
 		.siblings('.accordion-item')
 		.stop(true, true)
 		.slideToggle();

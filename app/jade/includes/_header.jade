@@ -13,16 +13,16 @@
 										a.social-block__link(href="#" class="social-block__link_#{socialClass[i]}")
 											span.seo-text #{socialButtonText[i]}				
 						.contacts
-							span.contacts__adress.contacts-elem ул. Маяковская 6, офис 17
-							span.contacts__phone.contacts-elem +7 (921) 123-12-13
+							a(href="#").contacts__adress.contacts-elem ул. Маяковская 6, офис 17
+							a(href="tel:+7 (921) 123-12-13").contacts__phone.contacts-elem +7 (921) 123-12-13
 				.header__logo-search
 					.container
 						.logo
-							a.logo__link
+							a(href="#").logo__link
 								img.logo__img(src="../img/logo/logo.png")
 								h1.seo-text Интернет Магазин
 						form.search__inputs(action="#" method="get" placeholder="Что будем искать")
-							input.s-input(type='text')
+							input.s-input(type='text' placeholder='Что будем искать ?')
 							button.s-button Найти
 						.user-menu
 							ul.user-menu__list

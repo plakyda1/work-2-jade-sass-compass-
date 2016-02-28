@@ -44,6 +44,8 @@ $header-map: sprite-map('header/*.png', $spacing:10px);
 	}
 	&-elem{
 		display:inline-block;
+		color:#000;
+		text-decoration: none;
 	}
 	&__phone{
 		font-size:18px;
@@ -60,6 +62,9 @@ $header-map: sprite-map('header/*.png', $spacing:10px);
 .logo{
 	@include vertical-align();
 	position:absolute;
+	&__img{
+		max-width:240px;
+	}
 }
 .header__logo-search{
 	height:95px;
