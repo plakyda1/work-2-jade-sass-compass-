@@ -260,6 +260,9 @@ h2 {
   display: inline-block;
   margin-right: 30px;
 }
+.user-menu__item:last-child {
+  margin-right: 0;
+}
 .user-menu__link {
   text-decoration: underline;
 }
