@@ -3,7 +3,7 @@
 
 	Как его установить?
 	
-	1. git clone https://github.com/plakyda1/wp-2.git site
+	1. git clone https://github.com/plakyda1/work-2-jade-sass-compass-.git
 	2. cd site
 	3. npm i
 	4. bower i
